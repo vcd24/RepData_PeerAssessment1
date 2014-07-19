@@ -20,70 +20,88 @@ attach(data)
 ## The following object is masked _by_ .GlobalEnv:
 ## 
 ##     steps
-## The following object is masked from avgSteps (position 4):
+## The following object is masked from avgSteps (position 3):
 ## 
 ##     interval
+## The following objects are masked from newData (position 4):
+## 
+##     date, interval, steps
 ## The following objects are masked from newData (position 5):
 ## 
 ##     date, interval, steps
-## The following objects are masked from noNA (position 6):
+## The following object is masked from avgSteps (position 6):
 ## 
-##     date, interval, steps
+##     interval
 ## The following objects are masked from noNA (position 7):
 ## 
 ##     date, interval, steps
-## The following objects are masked from noNA (position 8):
+## The following objects are masked from data (position 8):
 ## 
 ##     date, interval, steps
-## The following objects are masked from newData (position 9):
-## 
-##     date, interval, steps
-## The following objects are masked from noNA (position 10):
-## 
-##     date, interval, steps
-## The following objects are masked from data (position 11):
-## 
-##     date, interval, steps
-## The following object is masked from avgSteps (position 12):
+## The following object is masked from avgSteps (position 10):
 ## 
 ##     interval
-## The following objects are masked from data (position 13):
+## The following objects are masked from newData (position 11):
 ## 
 ##     date, interval, steps
-## The following objects are masked from data (position 14):
+## The following objects are masked from noNA (position 12):
 ## 
 ##     date, interval, steps
-## The following object is masked from avgSteps (position 15):
+## The following objects are masked from noNA (position 13):
 ## 
-##     interval
-## The following objects are masked from data (position 16):
+##     date, interval, steps
+## The following objects are masked from noNA (position 14):
+## 
+##     date, interval, steps
+## The following objects are masked from newData (position 15):
+## 
+##     date, interval, steps
+## The following objects are masked from noNA (position 16):
 ## 
 ##     date, interval, steps
 ## The following objects are masked from data (position 17):
 ## 
 ##     date, interval, steps
-## The following objects are masked from noNA (position 19):
+## The following object is masked from avgSteps (position 18):
+## 
+##     interval
+## The following objects are masked from data (position 19):
 ## 
 ##     date, interval, steps
-## The following objects are masked from noNA (position 20):
+## The following objects are masked from data (position 20):
 ## 
 ##     date, interval, steps
-## The following objects are masked from dataWithoutNA (position 23):
+## The following object is masked from avgSteps (position 21):
+## 
+##     interval
+## The following objects are masked from data (position 22):
 ## 
 ##     date, interval, steps
-## The following objects are masked from dataWithoutNA (position 24):
+## The following objects are masked from data (position 23):
 ## 
 ##     date, interval, steps
-## The following objects are masked from dataWithoutNA (position 25):
+## The following objects are masked from noNA (position 25):
 ## 
 ##     date, interval, steps
-## The following objects are masked from dataWithoutNA (position 26):
+## The following objects are masked from noNA (position 26):
 ## 
 ##     date, interval, steps
-## The following objects are masked from dataWithoutNA (position 27):
+## The following objects are masked from dataWithoutNA (position 29):
 ## 
 ##     date, interval, steps
-## The following objects are masked from data (position 29):
+## The following objects are masked from dataWithoutNA (position 30):
+## 
+##     date, interval, steps
+## The following objects are masked from dataWithoutNA (position 31):
+## 
+##     date, interval, steps
+## The following objects are masked from dataWithoutNA (position 32):
+## 
+##     date, interval, steps
+## The following objects are masked from dataWithoutNA (position 33):
+## 
+##     date, interval, steps
+## The following objects are masked from data (position 35):
 ## 
 ##     date, interval, steps
 ```
@@ -133,70 +151,88 @@ attach(noNA)
 ## The following objects are masked from data (position 3):
 ## 
 ##     date, interval, steps
-## The following object is masked from avgSteps (position 5):
+## The following object is masked from avgSteps (position 4):
 ## 
 ##     interval
+## The following objects are masked from newData (position 5):
+## 
+##     date, interval, month, steps
 ## The following objects are masked from newData (position 6):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from noNA (position 7):
+## The following object is masked from avgSteps (position 7):
 ## 
-##     date, interval, month, steps
+##     interval
 ## The following objects are masked from noNA (position 8):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from noNA (position 9):
-## 
-##     date, interval, month, steps
-## The following objects are masked from newData (position 10):
-## 
-##     date, interval, month, steps
-## The following objects are masked from noNA (position 11):
-## 
-##     date, interval, month, steps
-## The following objects are masked from data (position 12):
+## The following objects are masked from data (position 9):
 ## 
 ##     date, interval, steps
-## The following object is masked from avgSteps (position 13):
+## The following object is masked from avgSteps (position 11):
 ## 
 ##     interval
-## The following objects are masked from data (position 14):
+## The following objects are masked from newData (position 12):
 ## 
-##     date, interval, steps
-## The following objects are masked from data (position 15):
+##     date, interval, month, steps
+## The following objects are masked from noNA (position 13):
 ## 
-##     date, interval, steps
-## The following object is masked from avgSteps (position 16):
+##     date, interval, month, steps
+## The following objects are masked from noNA (position 14):
 ## 
-##     interval
-## The following objects are masked from data (position 17):
+##     date, interval, month, steps
+## The following objects are masked from noNA (position 15):
 ## 
-##     date, interval, steps
+##     date, interval, month, steps
+## The following objects are masked from newData (position 16):
+## 
+##     date, interval, month, steps
+## The following objects are masked from noNA (position 17):
+## 
+##     date, interval, month, steps
 ## The following objects are masked from data (position 18):
 ## 
 ##     date, interval, steps
-## The following objects are masked from noNA (position 20):
+## The following object is masked from avgSteps (position 19):
+## 
+##     interval
+## The following objects are masked from data (position 20):
 ## 
 ##     date, interval, steps
-## The following objects are masked from noNA (position 21):
+## The following objects are masked from data (position 21):
+## 
+##     date, interval, steps
+## The following object is masked from avgSteps (position 22):
+## 
+##     interval
+## The following objects are masked from data (position 23):
+## 
+##     date, interval, steps
+## The following objects are masked from data (position 24):
+## 
+##     date, interval, steps
+## The following objects are masked from noNA (position 26):
+## 
+##     date, interval, steps
+## The following objects are masked from noNA (position 27):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from dataWithoutNA (position 24):
+## The following objects are masked from dataWithoutNA (position 30):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from dataWithoutNA (position 25):
+## The following objects are masked from dataWithoutNA (position 31):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from dataWithoutNA (position 26):
+## The following objects are masked from dataWithoutNA (position 32):
 ## 
 ##     date, interval, steps
-## The following objects are masked from dataWithoutNA (position 27):
+## The following objects are masked from dataWithoutNA (position 33):
 ## 
 ##     date, interval, steps
-## The following objects are masked from dataWithoutNA (position 28):
+## The following objects are masked from dataWithoutNA (position 34):
 ## 
 ##     date, interval, steps
-## The following objects are masked from data (position 30):
+## The following objects are masked from data (position 36):
 ## 
 ##     date, interval, steps
 ```
@@ -270,70 +306,88 @@ attach(avgSteps)
 ## The following object is masked from data (position 4):
 ## 
 ##     interval
-## The following objects are masked from avgSteps (position 6):
+## The following objects are masked from avgSteps (position 5):
 ## 
 ##     interval, meanOfSteps, weekdays
-## The following objects are masked from newData (position 7):
+## The following objects are masked from newData (position 6):
 ## 
 ##     interval, weekdays
-## The following object is masked from noNA (position 8):
+## The following object is masked from newData (position 7):
 ## 
 ##     interval
+## The following objects are masked from avgSteps (position 8):
+## 
+##     interval, meanOfSteps, weekdays
 ## The following object is masked from noNA (position 9):
 ## 
 ##     interval
-## The following object is masked from noNA (position 10):
+## The following object is masked from data (position 10):
 ## 
 ##     interval
-## The following object is masked from newData (position 11):
+## The following objects are masked from avgSteps (position 12):
+## 
+##     interval, meanOfSteps, weekdays
+## The following objects are masked from newData (position 13):
+## 
+##     interval, weekdays
+## The following object is masked from noNA (position 14):
 ## 
 ##     interval
-## The following object is masked from noNA (position 12):
+## The following object is masked from noNA (position 15):
 ## 
 ##     interval
-## The following object is masked from data (position 13):
+## The following object is masked from noNA (position 16):
 ## 
 ##     interval
-## The following object is masked from avgSteps (position 14):
+## The following object is masked from newData (position 17):
 ## 
 ##     interval
-## The following object is masked from data (position 15):
-## 
-##     interval
-## The following object is masked from data (position 16):
-## 
-##     interval
-## The following object is masked from avgSteps (position 17):
-## 
-##     interval
-## The following object is masked from data (position 18):
+## The following object is masked from noNA (position 18):
 ## 
 ##     interval
 ## The following object is masked from data (position 19):
 ## 
 ##     interval
-## The following object is masked from noNA (position 21):
+## The following object is masked from avgSteps (position 20):
 ## 
 ##     interval
-## The following object is masked from noNA (position 22):
+## The following object is masked from data (position 21):
 ## 
 ##     interval
-## The following object is masked from dataWithoutNA (position 25):
+## The following object is masked from data (position 22):
 ## 
 ##     interval
-## The following object is masked from dataWithoutNA (position 26):
+## The following object is masked from avgSteps (position 23):
 ## 
 ##     interval
-## The following object is masked from dataWithoutNA (position 27):
+## The following object is masked from data (position 24):
 ## 
 ##     interval
-## The following object is masked from dataWithoutNA (position 28):
+## The following object is masked from data (position 25):
 ## 
 ##     interval
-## The following object is masked from dataWithoutNA (position 29):
+## The following object is masked from noNA (position 27):
 ## 
 ##     interval
-## The following object is masked from data (position 31):
+## The following object is masked from noNA (position 28):
+## 
+##     interval
+## The following object is masked from dataWithoutNA (position 31):
+## 
+##     interval
+## The following object is masked from dataWithoutNA (position 32):
+## 
+##     interval
+## The following object is masked from dataWithoutNA (position 33):
+## 
+##     interval
+## The following object is masked from dataWithoutNA (position 34):
+## 
+##     interval
+## The following object is masked from dataWithoutNA (position 35):
+## 
+##     interval
+## The following object is masked from data (position 37):
 ## 
 ##     interval
 ```
@@ -437,70 +491,88 @@ attach(newData)
 ## The following objects are masked from data (position 5):
 ## 
 ##     date, interval, steps
-## The following object is masked from avgSteps (position 7):
+## The following object is masked from avgSteps (position 6):
 ## 
 ##     interval
+## The following objects are masked from newData (position 7):
+## 
+##     date, interval, month, steps
 ## The following objects are masked from newData (position 8):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from noNA (position 9):
+## The following object is masked from avgSteps (position 9):
 ## 
-##     date, interval, month, steps
+##     interval
 ## The following objects are masked from noNA (position 10):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from noNA (position 11):
-## 
-##     date, interval, month, steps
-## The following objects are masked from newData (position 12):
-## 
-##     date, interval, month, steps
-## The following objects are masked from noNA (position 13):
-## 
-##     date, interval, month, steps
-## The following objects are masked from data (position 14):
+## The following objects are masked from data (position 11):
 ## 
 ##     date, interval, steps
-## The following object is masked from avgSteps (position 15):
+## The following object is masked from avgSteps (position 13):
 ## 
 ##     interval
-## The following objects are masked from data (position 16):
+## The following objects are masked from newData (position 14):
 ## 
-##     date, interval, steps
-## The following objects are masked from data (position 17):
+##     date, interval, month, steps
+## The following objects are masked from noNA (position 15):
 ## 
-##     date, interval, steps
-## The following object is masked from avgSteps (position 18):
+##     date, interval, month, steps
+## The following objects are masked from noNA (position 16):
 ## 
-##     interval
-## The following objects are masked from data (position 19):
+##     date, interval, month, steps
+## The following objects are masked from noNA (position 17):
 ## 
-##     date, interval, steps
+##     date, interval, month, steps
+## The following objects are masked from newData (position 18):
+## 
+##     date, interval, month, steps
+## The following objects are masked from noNA (position 19):
+## 
+##     date, interval, month, steps
 ## The following objects are masked from data (position 20):
 ## 
 ##     date, interval, steps
-## The following objects are masked from noNA (position 22):
+## The following object is masked from avgSteps (position 21):
+## 
+##     interval
+## The following objects are masked from data (position 22):
 ## 
 ##     date, interval, steps
-## The following objects are masked from noNA (position 23):
+## The following objects are masked from data (position 23):
+## 
+##     date, interval, steps
+## The following object is masked from avgSteps (position 24):
+## 
+##     interval
+## The following objects are masked from data (position 25):
+## 
+##     date, interval, steps
+## The following objects are masked from data (position 26):
+## 
+##     date, interval, steps
+## The following objects are masked from noNA (position 28):
+## 
+##     date, interval, steps
+## The following objects are masked from noNA (position 29):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from dataWithoutNA (position 26):
+## The following objects are masked from dataWithoutNA (position 32):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from dataWithoutNA (position 27):
+## The following objects are masked from dataWithoutNA (position 33):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from dataWithoutNA (position 28):
+## The following objects are masked from dataWithoutNA (position 34):
 ## 
 ##     date, interval, steps
-## The following objects are masked from dataWithoutNA (position 29):
+## The following objects are masked from dataWithoutNA (position 35):
 ## 
 ##     date, interval, steps
-## The following objects are masked from dataWithoutNA (position 30):
+## The following objects are masked from dataWithoutNA (position 36):
 ## 
 ##     date, interval, steps
-## The following objects are masked from data (position 32):
+## The following objects are masked from data (position 38):
 ## 
 ##     date, interval, steps
 ```
@@ -616,70 +688,88 @@ attach(newData)
 ## The following objects are masked from data (position 6):
 ## 
 ##     date, interval, steps
-## The following objects are masked from avgSteps (position 8):
+## The following objects are masked from avgSteps (position 7):
 ## 
 ##     interval, weekdays
-## The following objects are masked from newData (position 9):
+## The following objects are masked from newData (position 8):
 ## 
 ##     date, interval, month, steps, weekdays
-## The following objects are masked from noNA (position 10):
+## The following objects are masked from newData (position 9):
 ## 
 ##     date, interval, month, steps
+## The following objects are masked from avgSteps (position 10):
+## 
+##     interval, weekdays
 ## The following objects are masked from noNA (position 11):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from noNA (position 12):
+## The following objects are masked from data (position 12):
+## 
+##     date, interval, steps
+## The following objects are masked from avgSteps (position 14):
+## 
+##     interval, weekdays
+## The following objects are masked from newData (position 15):
+## 
+##     date, interval, month, steps, weekdays
+## The following objects are masked from noNA (position 16):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from newData (position 13):
+## The following objects are masked from noNA (position 17):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from noNA (position 14):
+## The following objects are masked from noNA (position 18):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from data (position 15):
+## The following objects are masked from newData (position 19):
 ## 
-##     date, interval, steps
-## The following object is masked from avgSteps (position 16):
+##     date, interval, month, steps
+## The following objects are masked from noNA (position 20):
 ## 
-##     interval
-## The following objects are masked from data (position 17):
-## 
-##     date, interval, steps
-## The following objects are masked from data (position 18):
-## 
-##     date, interval, steps
-## The following object is masked from avgSteps (position 19):
-## 
-##     interval
-## The following objects are masked from data (position 20):
-## 
-##     date, interval, steps
+##     date, interval, month, steps
 ## The following objects are masked from data (position 21):
 ## 
 ##     date, interval, steps
-## The following objects are masked from noNA (position 23):
+## The following object is masked from avgSteps (position 22):
+## 
+##     interval
+## The following objects are masked from data (position 23):
 ## 
 ##     date, interval, steps
-## The following objects are masked from noNA (position 24):
+## The following objects are masked from data (position 24):
+## 
+##     date, interval, steps
+## The following object is masked from avgSteps (position 25):
+## 
+##     interval
+## The following objects are masked from data (position 26):
+## 
+##     date, interval, steps
+## The following objects are masked from data (position 27):
+## 
+##     date, interval, steps
+## The following objects are masked from noNA (position 29):
+## 
+##     date, interval, steps
+## The following objects are masked from noNA (position 30):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from dataWithoutNA (position 27):
+## The following objects are masked from dataWithoutNA (position 33):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from dataWithoutNA (position 28):
+## The following objects are masked from dataWithoutNA (position 34):
 ## 
 ##     date, interval, month, steps
-## The following objects are masked from dataWithoutNA (position 29):
+## The following objects are masked from dataWithoutNA (position 35):
 ## 
 ##     date, interval, steps
-## The following objects are masked from dataWithoutNA (position 30):
+## The following objects are masked from dataWithoutNA (position 36):
 ## 
 ##     date, interval, steps
-## The following objects are masked from dataWithoutNA (position 31):
+## The following objects are masked from dataWithoutNA (position 37):
 ## 
 ##     date, interval, steps
-## The following objects are masked from data (position 33):
+## The following objects are masked from data (position 39):
 ## 
 ##     date, interval, steps
 ```
@@ -706,70 +796,88 @@ attach(avgSteps)
 ## The following object is masked from data (position 7):
 ## 
 ##     interval
-## The following objects are masked from avgSteps (position 9):
+## The following objects are masked from avgSteps (position 8):
 ## 
 ##     interval, meanOfSteps, weekdays
-## The following objects are masked from newData (position 10):
+## The following objects are masked from newData (position 9):
 ## 
 ##     interval, weekdays
-## The following object is masked from noNA (position 11):
+## The following object is masked from newData (position 10):
 ## 
 ##     interval
+## The following objects are masked from avgSteps (position 11):
+## 
+##     interval, meanOfSteps, weekdays
 ## The following object is masked from noNA (position 12):
 ## 
 ##     interval
-## The following object is masked from noNA (position 13):
+## The following object is masked from data (position 13):
 ## 
 ##     interval
-## The following object is masked from newData (position 14):
+## The following objects are masked from avgSteps (position 15):
+## 
+##     interval, meanOfSteps, weekdays
+## The following objects are masked from newData (position 16):
+## 
+##     interval, weekdays
+## The following object is masked from noNA (position 17):
 ## 
 ##     interval
-## The following object is masked from noNA (position 15):
+## The following object is masked from noNA (position 18):
 ## 
 ##     interval
-## The following object is masked from data (position 16):
+## The following object is masked from noNA (position 19):
 ## 
 ##     interval
-## The following object is masked from avgSteps (position 17):
+## The following object is masked from newData (position 20):
 ## 
 ##     interval
-## The following object is masked from data (position 18):
-## 
-##     interval
-## The following object is masked from data (position 19):
-## 
-##     interval
-## The following object is masked from avgSteps (position 20):
-## 
-##     interval
-## The following object is masked from data (position 21):
+## The following object is masked from noNA (position 21):
 ## 
 ##     interval
 ## The following object is masked from data (position 22):
 ## 
 ##     interval
-## The following object is masked from noNA (position 24):
+## The following object is masked from avgSteps (position 23):
 ## 
 ##     interval
-## The following object is masked from noNA (position 25):
+## The following object is masked from data (position 24):
 ## 
 ##     interval
-## The following object is masked from dataWithoutNA (position 28):
+## The following object is masked from data (position 25):
 ## 
 ##     interval
-## The following object is masked from dataWithoutNA (position 29):
+## The following object is masked from avgSteps (position 26):
 ## 
 ##     interval
-## The following object is masked from dataWithoutNA (position 30):
+## The following object is masked from data (position 27):
 ## 
 ##     interval
-## The following object is masked from dataWithoutNA (position 31):
+## The following object is masked from data (position 28):
 ## 
 ##     interval
-## The following object is masked from dataWithoutNA (position 32):
+## The following object is masked from noNA (position 30):
 ## 
 ##     interval
-## The following object is masked from data (position 34):
+## The following object is masked from noNA (position 31):
+## 
+##     interval
+## The following object is masked from dataWithoutNA (position 34):
+## 
+##     interval
+## The following object is masked from dataWithoutNA (position 35):
+## 
+##     interval
+## The following object is masked from dataWithoutNA (position 36):
+## 
+##     interval
+## The following object is masked from dataWithoutNA (position 37):
+## 
+##     interval
+## The following object is masked from dataWithoutNA (position 38):
+## 
+##     interval
+## The following object is masked from data (position 40):
 ## 
 ##     interval
 ```
