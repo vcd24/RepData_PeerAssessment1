@@ -84,14 +84,19 @@ sum(is.na(newData))
 4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. 
 
 ```{r}
-ggplot(newData, aes(date, steps)) + geom_bar(stat = "identity", colour = "steelblue", fill = "steelblue", width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Number of Steps Taken Each Day (no missing data)", x = "Date", y = "Total number of steps")
+ggplot(newData, aes(date, steps)) + geom_bar(stat = "identity",
+                                             colour = "steelblue",
+                                             fill = "steelblue",
+                                             width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Number of Steps Taken Each Day (no missing data)", x = "Date", y = "Total number of steps")
 ```
 
 Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
 Mean total number of steps taken per day:
 ```{r}
-newTotalSteps <- aggregate(newData$steps, list(Date = newData$date), FUN = "sum")$x
+newTotalSteps <- aggregate(newData$steps, 
+                           list(Date = newData$date), 
+                           FUN = "sum")$x
 newMean <- mean(newTotalSteps)
 newMean
 ```
@@ -117,7 +122,10 @@ So, after imputing the missing data, the new mean of total steps taken per day i
 head(newData)
 newData$weekdays <- factor(format(newData$date, "%A"))
 levels(newData$weekdays)
-levels(newData$weekdays) <- list(weekday = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"), weekend = c("Saturday", "Sunday"))
+levels(newData$weekdays) <- list(weekday = c("Monday", "Tuesday",
+                                             "Wednesday", 
+                                             "Thursday", "Friday"),
+                                 weekend = c("Saturday", "Sunday"))
 levels(newData$weekdays)
 table(newData$weekdays)
 ```
@@ -125,8 +133,13 @@ table(newData$weekdays)
 2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
 
 ```{r}
-avgSteps <- aggregate(newData$steps, list(interval = as.numeric(as.character(newData$interval)), weekdays = newData$weekdays), FUN = "mean")
+avgSteps <- aggregate(newData$steps, 
+                      list(interval = as.numeric(as.character(newData$interval)), 
+                           weekdays = newData$weekdays),
+                      FUN = "mean")
 names(avgSteps)[3] <- "meanOfSteps"
 library(lattice)
-xyplot(avgSteps$meanOfSteps ~ avgSteps$interval | avgSteps$weekdays, layout = c(1, 2), type = "l", xlab = "Interval", ylab = "Number of steps")
+xyplot(avgSteps$meanOfSteps ~ avgSteps$interval | avgSteps$weekdays, 
+       layout = c(1, 2), type = "l", 
+       xlab = "Interval", ylab = "Number of steps")
 ```

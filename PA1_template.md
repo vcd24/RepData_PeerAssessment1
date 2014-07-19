@@ -152,7 +152,10 @@ sum(is.na(newData))
 
 
 ```r
-ggplot(newData, aes(date, steps)) + geom_bar(stat = "identity", colour = "steelblue", fill = "steelblue", width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Number of Steps Taken Each Day (no missing data)", x = "Date", y = "Total number of steps")
+ggplot(newData, aes(date, steps)) + geom_bar(stat = "identity",
+                                             colour = "steelblue",
+                                             fill = "steelblue",
+                                             width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Number of Steps Taken Each Day (no missing data)", x = "Date", y = "Total number of steps")
 ```
 
 ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
@@ -162,7 +165,9 @@ Do these values differ from the estimates from the first part of the assignment?
 Mean total number of steps taken per day:
 
 ```r
-newTotalSteps <- aggregate(newData$steps, list(Date = newData$date), FUN = "sum")$x
+newTotalSteps <- aggregate(newData$steps, 
+                           list(Date = newData$date), 
+                           FUN = "sum")$x
 newMean <- mean(newTotalSteps)
 newMean
 ```
@@ -231,7 +236,10 @@ levels(newData$weekdays)
 ```
 
 ```r
-levels(newData$weekdays) <- list(weekday = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"), weekend = c("Saturday", "Sunday"))
+levels(newData$weekdays) <- list(weekday = c("Monday", "Tuesday",
+                                             "Wednesday", 
+                                             "Thursday", "Friday"),
+                                 weekend = c("Saturday", "Sunday"))
 levels(newData$weekdays)
 ```
 
@@ -253,10 +261,15 @@ table(newData$weekdays)
 
 
 ```r
-avgSteps <- aggregate(newData$steps, list(interval = as.numeric(as.character(newData$interval)), weekdays = newData$weekdays), FUN = "mean")
+avgSteps <- aggregate(newData$steps, 
+                      list(interval = as.numeric(as.character(newData$interval)), 
+                           weekdays = newData$weekdays),
+                      FUN = "mean")
 names(avgSteps)[3] <- "meanOfSteps"
 library(lattice)
-xyplot(avgSteps$meanOfSteps ~ avgSteps$interval | avgSteps$weekdays, layout = c(1, 2), type = "l", xlab = "Interval", ylab = "Number of steps")
+xyplot(avgSteps$meanOfSteps ~ avgSteps$interval | avgSteps$weekdays, 
+       layout = c(1, 2), type = "l", 
+       xlab = "Interval", ylab = "Number of steps")
 ```
 
 ![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
