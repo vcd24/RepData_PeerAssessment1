@@ -46,7 +46,7 @@ library(ggplot2)
 ### What is mean total number of steps taken per day?
 For this part of the assignment, you can ignore the missing values in the dataset.
 
-1. Make a histogram of the total number of steps taken each day
+* Make a histogram of the total number of steps taken each day
 
 ```r
 ggplot(noNA, aes(date, steps)) + geom_bar(stat = "identity", colour = "steelblue", fill = "steelblue", width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Number of Steps Taken Each Day", x = "Date", y = "Total number of steps")
@@ -54,7 +54,7 @@ ggplot(noNA, aes(date, steps)) + geom_bar(stat = "identity", colour = "steelblue
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
-2. Calculate and report the mean and median total number of steps taken per day
+* Calculate and report the mean and median total number of steps taken per day
 
 Mean total number of steps taken per day:
 
@@ -77,7 +77,7 @@ median(totalSteps)
 ```
 
 ### What is the average daily activity pattern?
-1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
+* Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
 
 ```r
@@ -89,7 +89,7 @@ ggplot(avgSteps, aes(interval, meanOfSteps)) + geom_line(color = "steelblue", si
 
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
 
-2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
+* Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 ```r
 avgSteps[avgSteps$meanOfSteps == max(avgSteps$meanOfSteps), ]
@@ -101,7 +101,7 @@ avgSteps[avgSteps$meanOfSteps == max(avgSteps$meanOfSteps), ]
 ```
 
 ### Imputing missing values
-1. The total number of rows with NAs:
+* The total number of rows with NAs:
 
 
 ```r
@@ -112,11 +112,11 @@ sum(is.na(data))
 ## [1] 2304
 ```
 
-2. Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
+* Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.
 
 My strategy is to use the mean for that 5-minute interval to fill each NA value in the steps column.
 
-3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
+* Create a new dataset that is equal to the original dataset but with the missing data filled in.
 
 
 ```r
@@ -148,7 +148,7 @@ sum(is.na(newData))
 ## [1] 0
 ```
 
-4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. 
+* Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. 
 
 
 ```r
@@ -160,7 +160,7 @@ ggplot(newData, aes(date, steps)) + geom_bar(stat = "identity",
 
 ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
 
-Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
+* Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
 Mean total number of steps taken per day:
 
@@ -208,7 +208,7 @@ So, after imputing the missing data, the new mean of total steps taken per day i
 
 ### Are there differences in activity patterns between weekdays and weekends?
 
-1. Create a new factor variable in the dataset with two levels -- "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
+* Create a new factor variable in the dataset with two levels -- "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 
 
 ```r
@@ -257,7 +257,7 @@ table(newData$weekdays)
 ##   12960    4608
 ```
 
-2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
+* Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
 
 
 ```r
