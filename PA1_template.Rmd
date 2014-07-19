@@ -7,12 +7,12 @@ Created by Xiaodan Zhang on July 18, 2014
 echo = TRUE  # Always make code visible
 options(scipen = 1)  # Turn off scientific notations for numbers
 ```
+
 ### Loading and processing the data
 ```{r}
 unzip("activity.zip")
 data <- read.csv("activity.csv", colClasses = c("integer", "Date", "factor"))
-attach(data)
-data$month <- as.numeric(format(date, "%m"))
+data$month <- as.numeric(format(data$date, "%m"))
 noNA <- na.omit(data)
 rownames(noNA) <- 1:nrow(noNA)
 head(noNA)
@@ -20,12 +20,12 @@ dim(noNA)
 library(ggplot2)
 ```
 
+
 ### What is mean total number of steps taken per day?
 For this part of the assignment, you can ignore the missing values in the dataset.
 
 1. Make a histogram of the total number of steps taken each day
 ```{r}
-attach(noNA)
 ggplot(noNA, aes(date, steps)) + geom_bar(stat = "identity", colour = "steelblue", fill = "steelblue", width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Number of Steps Taken Each Day", x = "Date", y = "Total number of steps")
 ```
 
@@ -33,7 +33,7 @@ ggplot(noNA, aes(date, steps)) + geom_bar(stat = "identity", colour = "steelblue
 
 Mean total number of steps taken per day:
 ```{r}
-totalSteps <- aggregate(steps, list(Date = date), FUN = "sum")$x
+totalSteps <- aggregate(noNA$steps, list(Date = noNA$date), FUN = "sum")$x
 mean(totalSteps)
 ```
 Median total number of steps taken per day:
@@ -45,15 +45,15 @@ median(totalSteps)
 1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
 ```{r}
-avgSteps <- aggregate(steps, list(interval = as.numeric(as.character(interval))), FUN = "mean")
+avgSteps <- aggregate(noNA$steps, list(interval = as.numeric(as.character(noNA$interval))), FUN = "mean")
+names(avgSteps)[2] <- "meanOfSteps"
 
-ggplot(avgSteps, aes(interval, y = x)) + geom_line(color = "steelblue", size = 0.8) + labs(title = "Time Series Plot of the 5-minute Interval", x = "5-minute intervals", y = "Average Number of Steps Taken")
+ggplot(avgSteps, aes(interval, meanOfSteps)) + geom_line(color = "steelblue", size = 0.8) + labs(title = "Time Series Plot of the 5-minute Interval", x = "5-minute intervals", y = "Average Number of Steps Taken")
 ```
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 ```{r}
-attach(avgSteps)
-avgSteps[x == max(x), ]
+avgSteps[avgSteps$meanOfSteps == max(avgSteps$meanOfSteps), ]
 ```
 
 ### Imputing missing values
@@ -73,7 +73,7 @@ My strategy is to use the mean for that 5-minute interval to fill each NA value 
 newData <- data 
 for (i in 1:nrow(newData)) {
     if (is.na(newData$steps[i])) {
-        newData$steps[i] <- avgSteps[which(newData$interval[i] == avgSteps$interval), ]$x
+        newData$steps[i] <- avgSteps[which(newData$interval[i] == avgSteps$interval), ]$meanOfSteps
     }
 }
 
@@ -91,8 +91,7 @@ Do these values differ from the estimates from the first part of the assignment?
 
 Mean total number of steps taken per day:
 ```{r}
-attach(newData)
-newTotalSteps <- aggregate(steps, list(Date = date), FUN = "sum")$x
+newTotalSteps <- aggregate(newData$steps, list(Date = newData$date), FUN = "sum")$x
 newMean <- mean(newTotalSteps)
 newMean
 ```
@@ -126,10 +125,8 @@ table(newData$weekdays)
 2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
 
 ```{r}
-attach(newData)
-avgSteps <- aggregate(steps, list(interval = as.numeric(as.character(interval)), weekdays = weekdays), FUN = "mean")
+avgSteps <- aggregate(newData$steps, list(interval = as.numeric(as.character(newData$interval)), weekdays = newData$weekdays), FUN = "mean")
 names(avgSteps)[3] <- "meanOfSteps"
-attach(avgSteps)
 library(lattice)
-xyplot(meanOfSteps ~ interval | weekdays, layout = c(1, 2), type = "l", xlab = "Interval", ylab = "Number of steps")
+xyplot(avgSteps$meanOfSteps ~ avgSteps$interval | avgSteps$weekdays, layout = c(1, 2), type = "l", xlab = "Interval", ylab = "Number of steps")
 ```
